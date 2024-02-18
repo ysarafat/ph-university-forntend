@@ -14,6 +14,6 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
         <RouterProvider router={router} />
       </PersistGate>
     </Provider>
-    <Toaster />
+    <Toaster expand={false} richColors />
   </React.StrictMode>
 );

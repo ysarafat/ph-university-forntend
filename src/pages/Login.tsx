@@ -36,9 +36,8 @@ const Login = () => {
       );
       navigate(`/${user.role}/dashboard`);
       toast.success("Logged in", { id: toastId, duration: 2000 });
-    } catch (error) {
-      console.log(error, "Login_error");
-      toast.error("Login Error");
+    } catch (error: any) {
+      toast.error(error.data.message, { id: toastId, duration: 2000 });
     }
   };
   return (
