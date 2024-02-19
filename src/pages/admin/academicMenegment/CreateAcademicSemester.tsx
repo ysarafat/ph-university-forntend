@@ -31,7 +31,7 @@ const CreateAcademicSemester = () => {
     };
     try {
       // creating academic semester add error handle
-      const res = (await addAcademicSemester(semesterData)) as TResponse;
+      const res = (await addAcademicSemester(semesterData)) as TResponse<any>;
       if (res.error) {
         toast.error(res.error.data.message, { id: loadingToastId });
       } else {
@@ -58,7 +58,9 @@ const CreateAcademicSemester = () => {
             options={monthOptions}
           />
           <PHSelect label="End Month" name="endMonth" options={monthOptions} />
-          <Button htmlType="submit">Submit</Button>
+          <Button size="large" htmlType="submit" style={{ width: "100%" }}>
+            Submit
+          </Button>
         </PHForm>
       </Col>
     </Flex>

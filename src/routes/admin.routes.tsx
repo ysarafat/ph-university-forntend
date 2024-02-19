@@ -2,7 +2,9 @@ import AdminDashboard from "../pages/admin/AdminDashboard";
 import CreateAdmin from "../pages/admin/CreateAdmin";
 import CreateFaculty from "../pages/admin/CreateFaculty";
 import CreateStudent from "../pages/admin/CreateStudent";
+import AcademicFaculty from "../pages/admin/academicMenegment/AcademicFaculty";
 import AcademicSemester from "../pages/admin/academicMenegment/AcademicSemester";
+import CreateAcademicFaculty from "../pages/admin/academicMenegment/CreateAcademicFaculty";
 import CreateAcademicSemester from "../pages/admin/academicMenegment/CreateAcademicSemester";
 
 export const adminPaths = [
@@ -27,12 +29,12 @@ export const adminPaths = [
       {
         name: "Create A. Faculty",
         path: "create-academic-faculty",
-        element: <AcademicSemester />,
+        element: <CreateAcademicFaculty />,
       },
       {
         name: "Academic Faculty",
         path: "academic-faculty",
-        element: <AcademicSemester />,
+        element: <AcademicFaculty />,
       },
       {
         name: "Create A. Department",
